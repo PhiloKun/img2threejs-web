@@ -1,0 +1,13 @@
+{
+  "name": "img2threejs",
+  "private": true,
+  "version": "0.1.0",
+  "description": "图片 → 纯代码 Three.js 3D 模型（一键式 Web 应用）",
+  "scripts": {
+    "setup": "npm --prefix web install",
+    "web": "npm --prefix web run dev",
+    "start": "npm --prefix web run start",
+    "build": "npm --prefix web run build",
+    "preview": "npm --prefix web run preview"
+  }
+}

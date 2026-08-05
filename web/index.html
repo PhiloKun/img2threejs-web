@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>img2threejs · 一键图转 3D</title>
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <aside id="panel">
+        <div class="brand">
+          <span class="logo">◈</span>
+          <div>
+            <h1>img2threejs</h1>
+            <p>图片 → 纯代码 3D 模型</p>
+          </div>
+        </div>
+
+        <div id="dropzone" tabindex="0">
+          <input id="fileInput" type="file" accept="image/*" hidden />
+          <div class="dz-inner">
+            <div class="dz-icon">⬆</div>
+            <p class="dz-title">拖入图片，或点击选择</p>
+            <p class="dz-sub">支持 PNG / JPG，建议使用干净背景的实物照片</p>
+          </div>
+        </div>
+
+        <div id="thumbWrap" class="hidden">
+          <img id="thumb" alt="预览" />
+          <span id="fileName"></span>
+        </div>
+
+        <button id="genBtn" class="primary" disabled>🚀 一键生成 3D 模型</button>
+
+        <ul id="stageList" class="stages">
+          <li data-stage="load"><span class="dot"></span>载入图像</li>
+          <li data-stage="mask"><span class="dot"></span>提取物体轮廓</li>
+          <li data-stage="geo"><span class="dot"></span>生成 3D 几何体</li>
+          <li data-stage="mat"><span class="dot"></span>应用材质与光照</li>
+          <li data-stage="done"><span class="dot"></span>完成</li>
+        </ul>
+
+        <div id="info" class="info hidden"></div>
+
+        <div class="actions">
+          <button id="flipBtn" disabled>↻ 翻转纹理</button>
+          <button id="resetBtn" disabled>✕ 清除</button>
+        </div>
+        <div class="actions">
+          <button id="downloadTS" disabled>⬇ 下载 .ts 工厂代码</button>
+          <button id="downloadGLB" disabled>⬇ 导出 GLB</button>
+        </div>
+
+        <p class="hint">拖动旋转 · 滚轮缩放 · 右键平移</p>
+      </aside>
+
+      <main id="view">
+        <div id="placeholder">
+          <div class="ph-icon">🧊</div>
+          <p>上传一张图片，点击「一键生成」即可看到 3D 模型</p>
+        </div>
+      </main>
+    </div>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

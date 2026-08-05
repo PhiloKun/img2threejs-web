@@ -1,0 +1,30 @@
+# dependencies
+node_modules/
+**/node_modules/
+
+# build output
+dist/
+**/dist/
+
+# python
+__pycache__/
+*.pyc
+.venv/
+.venv*/
+
+# local forge state
+.img2threejs/
+
+# workbuddy
+.workbuddy/
+
+# OS
+.DS_Store
+
+# intermediate / regenerable workspace artifacts
+workspace/viewer/
+workspace/details/
+workspace/pbr/
+workspace/di.json
+workspace/assessment.json
+workspace/spec.json
